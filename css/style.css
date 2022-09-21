@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root{
-    --grey-100: 245, 245, 245;
+    --grey-100: rgba(245, 245, 245, 1);
     --shadow-color : #9f9f9f;
     --white : #fff;
     --fs-xs: 12px;
@@ -16,15 +16,20 @@
     --fs-3xl: 30px;
     --fs-4xl: 36px;
     --fs-5xl: 48px;
+    --btn-color : rgba(38, 38, 38, 1);
+    --ff-segoe : 'Segoe UI';
 }
 body{
     background-color: var(--grey-100);
+    font-family: var(--ff-segoe);
 }
 .d-grid{
     width: 1320px;
     margin: 0 auto;
     display: grid;
     /* height: 100vh; */
+    padding-right: 16px;
+    padding-left: 16px;
     gap: 20px;
 }
 .row{
@@ -43,11 +48,20 @@ body{
 .absolute{
     position: absolute;
 }
+.r-0{
+    right: 0;
+}
+.d-flex{
+    display: flex;
+}
+.d-block{
+    display: block;
+}
 header{
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: var(--white);
-    box-shadow: 0 0 10px var(--shadow-color);
+    /* box-shadow: 0 0 10px var(--shadow-color); */
 }
 header .logo{
     max-width: 50px;
@@ -58,15 +72,20 @@ header .logo{
 }
 .search-bar{
     flex-basis: 30%;
+    margin-left: 20px;
 }
 .search-bar form{
     box-shadow: 0 0 5px var(--shadow-color);
     padding: 10px;
-    margin-left: 20px;
     margin-right: 20px;
     width: 100%;
 }
 form input{
-    width: 100%;
     border: none;
+}
+form .btn{
+    border: none;
+    background-color: transparent;
+    font-size: var(--fs-2xl);
+    color: var(--btn-color);
 }
