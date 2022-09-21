@@ -23,6 +23,9 @@ body{
     background-color: var(--grey-100);
     font-family: var(--ff-segoe);
 }
+a{
+    text-decoration: none;
+}
 .d-grid{
     width: 1320px;
     margin: 0 auto;
@@ -88,4 +91,10 @@ form .btn{
     background-color: transparent;
     font-size: var(--fs-2xl);
     color: var(--btn-color);
+}
+header .cta-btn{
+    margin-left: auto;
+}
+.login-btn{
+    font-size: var(--fs-base);
 }
