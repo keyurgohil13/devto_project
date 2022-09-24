@@ -121,4 +121,5 @@ header .cta-btn{
 .create-account a{
     color: var(--primary-color);
     font-weight: var(--fw-700);
+    
 }
