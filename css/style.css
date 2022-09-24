@@ -51,14 +51,23 @@ a{
     color: var(--link-color);
 }
 .container{
-    width: 1320px;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.p-16{
     padding-left: 16px;
     padding-right: 16px;
-    margin: 0 auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.py-0{
+    padding-top: 0;
+    padding-bottom: 0;
 }
 .d-grid{
     display: grid;
     gap: 20px;
+    grid-template-columns: repeat(4, 25%);
 }
 .row{
     display: flex;
@@ -89,6 +98,7 @@ a{
     transition: var(--transition);
 }
 header{
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: var(--white);
@@ -102,24 +112,24 @@ header .logo{
     display: block;
 }
 .search-bar{
-    flex-basis: 30%;
+    max-width: 420px;
+    flex: 1 0;
     margin-left: 20px;
     border: 1px solid var(--grey-500);
     border-radius: var(--radius);
 }
 .search-bar form{
-    /* padding: 10px; */
     width: 100%;
 }
 form input{
     border: none;
     font-size: var(--fs-16);
-    padding: 10px;
+    padding: 8px;
     background-color: transparent;
 }
 form .btn{
     border: none;
-    padding: 10px;
+    padding: 8px;
     background-color: transparent;
     font-size: var(--fs-24);
     color: var(--btn-color);
@@ -137,6 +147,7 @@ header .cta-btn{
     padding: 8px 10px;
     font-size: var(--fs-base);
     margin-right: 8px;
+    border-radius: var(--radius);
 }
 .cta-btn .create-account:hover a{
     background-color: var(--primary-color);
@@ -145,7 +156,6 @@ header .cta-btn{
 }
 .create-account a{
     border: 1px solid var(--primary-color);
-    border-radius: var(--radius);
     color: var(--primary-color);
     font-weight: var(--fw-700);
 }
