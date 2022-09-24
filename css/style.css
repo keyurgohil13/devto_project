@@ -5,6 +5,16 @@
 }
 :root{
     --grey-100: rgba(245, 245, 245, 1);
+    --grey-100: rgba(245, 245, 245, 1);
+    --grey-200: rgba(229, 229, 229, 1);
+    --grey-300: rgba(212, 212, 212, 1);
+    --grey-400: rgba(163, 163, 163, 1);
+    --grey-500: rgba(115, 115, 115, 1);
+    --grey-600: rgba(82, 82, 82, 1);
+    --grey-700: rgba(64, 64, 64, 1);
+    --grey-800: rgba(38, 38, 38, 1);
+    --grey-900: rgba(23, 23, 23, 1);
+    --btn-bg-color : rgba(59, 73, 223, 0.1);
     --shadow-color : #9f9f9f;
     --white : #fff;
     --fs-12: 12px;
@@ -30,6 +40,7 @@
     --link-color : #404040;
     --primary-color : #3b49df;
     --radius : 6px;
+    --transition : all 0.5s;
 }
 body{
     background-color: var(--grey-100);
@@ -39,13 +50,14 @@ a{
     text-decoration: none;
     color: var(--link-color);
 }
-.d-grid{
+.container{
     width: 1320px;
-    margin: 0 auto;
-    display: grid;
-    /* height: 100vh; */
-    padding-right: 16px;
     padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto;
+}
+.d-grid{
+    display: grid;
     gap: 20px;
 }
 .row{
@@ -73,11 +85,14 @@ a{
 .d-block{
     display: block;
 }
+.transition{
+    transition: var(--transition);
+}
 header{
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: var(--white);
-    /* box-shadow: 0 0 10px var(--shadow-color); */
+    box-shadow: 0 0 10px var(--shadow-color);
 }
 header .logo{
     max-width: 50px;
@@ -89,21 +104,30 @@ header .logo{
 .search-bar{
     flex-basis: 30%;
     margin-left: 20px;
+    border: 1px solid var(--grey-500);
     border-radius: var(--radius);
 }
 .search-bar form{
-    box-shadow: 0 0 5px var(--shadow-color);
-    padding: 10px;
+    /* padding: 10px; */
     width: 100%;
 }
 form input{
     border: none;
+    font-size: var(--fs-16);
+    padding: 10px;
+    background-color: transparent;
 }
 form .btn{
     border: none;
+    padding: 10px;
     background-color: transparent;
     font-size: var(--fs-24);
     color: var(--btn-color);
+    cursor: pointer;
+}
+.btn-hover:hover{
+    background-color: var(--btn-bg-color);
+    color: var(--primary-color);
 }
 header .cta-btn{
     margin-left: auto;
@@ -114,12 +138,14 @@ header .cta-btn{
     font-size: var(--fs-base);
     margin-right: 8px;
 }
-.cta-btn .create-account{
-    border: 1px solid var(--primary-color);
-    border-radius: var(--radius);
+.cta-btn .create-account:hover a{
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: underline;
 }
 .create-account a{
+    border: 1px solid var(--primary-color);
+    border-radius: var(--radius);
     color: var(--primary-color);
     font-weight: var(--fw-700);
-    
 }
