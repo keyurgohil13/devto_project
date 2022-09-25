@@ -1,0 +1,28 @@
+@media screen and (min-width : 768px) {
+    .d-grid{
+        grid-template-columns: 240px repeat(3, 1fr) ;
+        grid-template-rows: auto 1fr auto auto;
+    }
+    .main{
+        grid-column: 2 / span 3;
+    }
+    .footer{
+        grid-column: 1 / 5;
+    }
+}
+
+@media screen and (min-width : 1024px) {
+    .grid{
+        grid-template-rows: auto 1fr auto auto;
+    }
+    .sidebar{
+        grid-row: 1 / 4;
+    }
+    .main, .footer{
+        grid-column: 2 / 4;
+    }
+    .ads{
+        grid-column: 4 / 5;
+        grid-row : 1 / 4;
+    }
+}

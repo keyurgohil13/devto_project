@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+ul, ol{
+    list-style: none;
+}
 :root{
     --grey-100: rgba(245, 245, 245, 1);
     --grey-100: rgba(245, 245, 245, 1);
@@ -16,6 +19,8 @@
     --grey-900: rgba(23, 23, 23, 1);
     --btn-bg-color : rgba(59, 73, 223, 0.1);
     --shadow-color : #9f9f9f;
+    --card-border: (var(--grey-900), 0.5);
+    --black : #090909;
     --white : #fff;
     --fs-12: 12px;
     --fs-14: 14px;
@@ -66,8 +71,8 @@ a{
 }
 .d-grid{
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(4, 25%);
+    gap: 10px;
+    grid-template-rows: auto 1fr auto auto;
 }
 .row{
     display: flex;
@@ -96,6 +101,17 @@ a{
 }
 .transition{
     transition: var(--transition);
+}
+.c-link:hover{
+    color: var(--primary-color) !important;
+    text-decoration: underline;
+}
+.c-link-block:hover{
+    background-color: var(--btn-bg-color);
+}
+.c-ca:hover{
+    background-color: var(--primary-color);
+    color: var(--white) !important;
 }
 header{
     width: 100%;
@@ -135,10 +151,6 @@ form .btn{
     color: var(--btn-color);
     cursor: pointer;
 }
-.btn-hover:hover{
-    background-color: var(--btn-bg-color);
-    color: var(--primary-color);
-}
 header .cta-btn{
     margin-left: auto;
 }
@@ -149,13 +161,39 @@ header .cta-btn{
     margin-right: 8px;
     border-radius: var(--radius);
 }
-.cta-btn .create-account:hover a{
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-decoration: underline;
-}
-.create-account a{
+.create-account .c-link{
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
     font-weight: var(--fw-700);
+}
+
+/* Sidebar */
+
+.sidebar  .card{
+    padding: 16px;
+    background-color: var(--white);
+    box-shadow: 0 0 0 1px var(--grey-200);
+    border-radius: var(--radius);
+}
+.sidebar .card .card-subtitle{
+    font-size: var(--fs-20);
+}
+.sidebar .card .card-subtitle .c-link{
+    color: var(--primary-color);
+    display: inline-block;
+}
+
+
+
+/* Main */
+
+.main nav .nav-items .nav-item{
+    display: inline-block;
+    font-size: var(--fs-18);
+    color : var(--grey-500);
+    padding: 8px 12px;
+}
+.nav-item.active{
+    color: var(--black) !important;
+    font-weight: var(--fw-900);
 }
