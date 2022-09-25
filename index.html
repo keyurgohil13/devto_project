@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> DEV Community 👩‍💻👨‍💻</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/icon">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/all.min.css" type="text/css" />
@@ -31,7 +34,7 @@
                             
                         <input type="text" name="search" placeholder="Search.." />
 
-                        <button type="submit" class="btn transition btn-hover">
+                        <button type="submit" class="btn c-link-block transition c-link">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </form>
@@ -54,7 +57,7 @@
     </header>
     <div class="d-grid container p-16">
         <div class="sidebar">
-            <div class="card">
+            <div class="card d-flex flex-direction-column row-gap-8">
                 <h2 class="card-subtitle">
                     <a href="javascript:;" class="c-link">
                         DEV Community 👩‍💻👨‍💻
@@ -64,9 +67,21 @@
                 <p>
                     We're a place where coders share, stay up-to-date and grow their careers.
                 </p>
+                <div class="cta-btn d-flex flex-direction-reverse row-gap-8">
+                    <div class="login-btn">
+                        <a href="javascript:;" class="c-link c-link-block transition w-100">
+                            Log in
+                        </a>
+                    </div>
+                    <div class="create-account">
+                        <a href="javascript:;" class="c-ca c-link transition w-100">
+                            Create account
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="main">
+        <div class="main row-gap-8 d-flex flex-direction-column">
             <nav>
                 <ul class="d-flex nav-items">
                     <li>
@@ -86,8 +101,32 @@
                     </li>
                 </ul>
             </nav>
-
-            
+            <div class="featured">
+                <div class="featured-img">
+                    <a href="javascript:;">
+                        <img src="images/featured.jpg" alt="featured" />
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="card-header d-flex align-items-center">
+                        <div class="user-profile d-flex align-items-center">
+                            <a href="javascript:;">
+                                <img src="images/user-1.jpeg" alt="user" />
+                            </a>
+                        </div>
+                        <div class="userdetail">
+                            <div>
+                                <a href="javascript:;" class="username">
+                                    Mahmoud Harmouch
+                                </a>
+                            </div>
+                            <div class="post-date">
+                                <span>Sep 24</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="ads">
 
