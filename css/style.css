@@ -41,6 +41,8 @@ ul, ol{
     --fw-800 : 800;
     --fw-900 : 900;
     --btn-color : rgba(38, 38, 38, 1);
+    --tag-bg: var(--btn-bg-color);
+    --tag-prefix:var(--primary-color);
     --ff-segoe : 'Segoe UI';
     --link-color : #404040;
     --primary-color : #3b49df;
@@ -107,6 +109,9 @@ a{
 }
 .d-flex{
     display: flex;
+}
+.t-center{
+    text-align: center;
 }
 .d-block{
     display: block;
@@ -216,19 +221,22 @@ header .cta-btn{
     font-weight: var(--fw-900);
 }
 
-.main .featured{
+.main .featured-card, .main .card-story{
     border-radius: var(--radius);
     box-shadow: 0 0 0 1px var(--grey-300);
 }
-.featured .featured-img img{
+.main .featured-card .card-story{
+    box-shadow: none;
+}
+.featured-card .featured-img img{
     border-radius: var(--radius) var(--radius) 0 0;
     display: block;
     width: 100%;
 }
-.card{
+.card-story{
     padding: 20px;
 }
-.card .card-header .user-profile a{
+.card-story .card-header .user-profile a{
     display: inline-block;
     width: 32px;
     height: 32px;
@@ -242,7 +250,40 @@ header .cta-btn{
     object-fit: cover;
     width: 100%;
 }
-
+.card-story-body{
+    padding-left: 40px;
+}
+.card-story-title{
+    color: var(--grey-900);
+    font-size: var(--fs-30);
+    margin-bottom: 5px;
+}
+.card-story-tags li a{
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: var(--radius);
+}
+.card-story-tags li a .tag-prefix{
+    color: var(--tag-prefix);
+}
+.card-story-tags li a:hover{
+    background-color: var(--tag-bg);
+    box-shadow: 0 0 0 1px var(--tag-prefix);
+}
+.card-story-bottom .card-story-details a, .card-story-bottom .card-story-save a{
+    display: inline-block;
+    padding: 10px 12px;
+    border-radius: var(--radius);
+}
+.card-story-bottom .card-story-details a .icon, .card-story-bottom .card-story-save a .icon{
+    font-size: var(--fs-16);
+}
+.card-story-bottom a:not(.icon), .read-time{
+    font-size: var(--fs-14);
+}
+.card-story-bottom .card-story-details a:hover, .card-story-bottom .card-story-save a:hover{
+    background-color: var(--tag-bg);
+}
 /* Ads */
 .ads .ads-card-secondary{
     background-color: var(--grey-50);
